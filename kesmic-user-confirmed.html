@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>KesMic Field</title>
+  <style>
+    :root {
+      --bg: #f5f6f8; --card: #ffffff; --text: #1b1d22; --muted: #5d6370;
+      --ok: #1f9d55; --err: #d64545; --border: #e3e5ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111317; --card: #1b1e24; --text: #eceef2; --muted: #9aa1ad;
+        --ok: #3fbf74; --err: #f06a6a; --border: #2a2e36;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: flex; align-items: center;
+      justify-content: center; padding: 16px; background: var(--bg);
+      color: var(--text);
+      font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      width: 100%; max-width: 420px; background: var(--card);
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 32px 24px; text-align: center;
+    }
+    .icon {
+      width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; color: #fff; background: var(--ok);
+    }
+    .error .icon { background: var(--err); }
+    h1 { font-size: 22px; margin: 0 0 8px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    .brand { margin-top: 24px; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main id="card">
+    <div class="icon" id="icon">✓</div>
+    <h1 id="title">Email confirmed</h1>
+    <p id="message">Your email address is confirmed. Go back to the KesMic Field app and sign in.</p>
+    <p id="hint">You can close this page.</p>
+    <div class="brand">KesMic Field</div>
+  </main>
+  <script>
+    // Supabase adds the result to the URL fragment (and sometimes the query):
+    // tokens on success, error / error_description on failure.
+    (function () {
+      var raw = (location.hash || '').replace(/^#/, '') || location.search.replace(/^\?/, '');
+      var p = new URLSearchParams(raw);
+
+      // Never leave session tokens in the address bar or browser history.
+      if (location.hash || location.search) {
+        history.replaceState(null, '', location.pathname);
+      }
+
+      var set = function (id, text) { document.getElementById(id).textContent = text; };
+      var error = p.get('error') || p.get('error_code');
+
+      if (error) {
+        document.getElementById('card').className = 'error';
+        set('icon', '!');
+        set('title', 'This link didn’t work');
+        set('message', p.get('error_code') === 'otp_expired'
+          ? 'The link has expired or was already used. If you already confirmed your email, just sign in in the app. Otherwise, sign up again to get a new link.'
+          : (p.get('error_description') || 'Something went wrong.').replace(/\+/g, ' '));
+        set('hint', 'Go back to the KesMic Field app to continue.');
+      } else if (p.get('type') === 'recovery') {
+        set('title', 'Open the app to continue');
+        set('message', 'Go back to the KesMic Field app to reset your password.');
+      } else if (p.get('type') === 'email_change') {
+        set('title', 'Email updated');
+        set('message', 'Your new email address is confirmed. Go back to the KesMic Field app.');
+      }
+    })();
+  </script>
+</body>
+</html>
