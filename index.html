@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KesMic - AI Invoice & Quote App</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+
+body{
+
+background:#f8fafc;
+color:#0f172a;
+
+}
+
+
+.hero{
+
+min-height:100vh;
+
+background:
+linear-gradient(135deg,#0f172a,#1d4ed8);
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+padding:60px 8%;
+
+}
+
+
+.hero-content{
+
+max-width:650px;
+
+}
+
+
+.logo{
+
+width:90px;
+
+height:90px;
+
+background:white;
+
+color:#2563eb;
+
+border-radius:25px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:45px;
+
+font-weight:800;
+
+margin-bottom:35px;
+
+}
+
+
+h1{
+
+font-size:58px;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+}
+
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.7;
+
+opacity:.9;
+
+margin-bottom:35px;
+
+}
+
+
+.buttons a{
+
+display:inline-block;
+
+padding:16px 30px;
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-weight:600;
+
+margin-right:15px;
+
+}
+
+
+.primary{
+
+background:white;
+
+color:#2563eb;
+
+}
+
+
+.secondary{
+
+border:1px solid rgba(255,255,255,.4);
+
+color:white;
+
+}
+
+
+
+section{
+
+padding:80px 8%;
+
+}
+
+
+
+.title{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:22px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+
+
+.card h3{
+
+margin-bottom:15px;
+
+font-size:22px;
+
+}
+
+
+
+.card p{
+
+line-height:1.7;
+
+color:#475569;
+
+}
+
+
+
+.icon{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.ai{
+
+background:#eff6ff;
+
+}
+
+
+
+.steps{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+
+
+.step{
+
+text-align:center;
+
+}
+
+
+
+.number{
+
+width:55px;
+
+height:55px;
+
+background:#2563eb;
+
+color:white;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin:auto;
+
+font-size:22px;
+
+font-weight:bold;
+
+margin-bottom:20px;
+
+}
+
+
+
+.cta{
+
+background:#0f172a;
+
+color:white;
+
+text-align:center;
+
+border-radius:30px;
+
+margin:60px 8%;
+
+padding:70px 30px;
+
+}
+
+
+
+.cta h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+color:#64748b;
+
+}
+
+
+@media(max-width:700px){
+
+h1{
+
+font-size:40px;
+
+}
+
+.hero{
+
+padding:40px 6%;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="hero">
+
+
+<div class="hero-content">
+
+
+<div class="logo">
+K
+</div>
+
+
+<h1>
+Smart Invoicing for Small Businesses
+</h1>
+
+
+<p>
+
+Create professional invoices, quotes and payment records effortlessly.
+KesMic helps tradespeople, freelancers and small businesses manage their work with AI-powered tools.
+
+</p>
+
+
+
+<div class="buttons">
+
+<a class="primary" href="#">
+Download App
+</a>
+
+
+<a class="secondary" href="mailto:mail.quickproducts@gmail.com">
+Contact Us
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+Everything You Need to Run Your Business
+</h2>
+
+
+
+<div class="features">
+
+
+
+<div class="card">
+
+<div class="icon">
+🧾
+</div>
+
+<h3>
+Invoices & Quotes
+</h3>
+
+<p>
+Create professional invoices and quotes in seconds with beautiful templates.
+</p>
+
+</div>
+
+
+
+
+<div class="card ai">
+
+<div class="icon">
+🤖
+</div>
+
+<h3>
+AI Invoice Creation
+</h3>
+
+<p>
+Turn your voice description into invoices using intelligent AI assistance.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">
+👥
+</div>
+
+<h3>
+Customers & Products
+</h3>
+
+<p>
+Manage customers, products and services from one simple dashboard.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">
+📷
+</div>
+
+<h3>
+Photo Evidence
+</h3>
+
+<p>
+Attach photos and notes to invoices for professional proof of completed work.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+💳
+</div>
+
+<h3>
+Payment Tracking
+</h3>
+
+<p>
+Record payments and easily track outstanding invoices.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+🌍
+</div>
+
+<h3>
+Built for Small Businesses
+</h3>
+
+<p>
+Designed for electricians, plumbers, mechanics, freelancers and growing businesses.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+How KesMic Works
+</h2>
+
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="number">
+1
+</div>
+
+<h3>
+Create Your Business
+</h3>
+
+<p>
+Set up your profile and preferences.
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="number">
+2
+</div>
+
+<h3>
+Create Invoices
+</h3>
+
+<p>
+Add customers, products and services.
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="number">
+3
+</div>
+
+<h3>
+Get Paid Faster
+</h3>
+
+<p>
+Share professional invoices and track payments.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<div class="cta">
+
+
+<h2>
+Start Creating Professional Invoices Today
+</h2>
+
+
+<p>
+Simple. Professional. Powered by AI.
+</p>
+
+
+<br>
+
+
+<a class="primary" href="#">
+Get KesMic
+</a>
+
+
+</div>
+
+
+
+
+<footer>
+
+© 2026 KesMic<br><br>
+
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+&nbsp; | &nbsp;
+
+<a href="delete-account.html">
+Delete Account
+</a>
+
+<br><br>
+
+Support:
+<a href="mailto:mail.quickproducts@gmail.com">
+mail.quickproducts@gmail.com
+</a>
+
+</footer>
+
+
+
+</body>
+
+</html>
