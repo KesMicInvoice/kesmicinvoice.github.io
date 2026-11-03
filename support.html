@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KesMic Invoice Support</title>
+<meta name="description" content="Help and support for KesMic Invoice: voice invoices, PDFs, subscriptions, account and contact.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+
+    background: linear-gradient(135deg, #0f172a, #1e40af, #2563eb);
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    color: white;
+}
+
+
+.container {
+
+    max-width: 850px;
+
+    width: 100%;
+
+    background: rgba(255,255,255,0.10);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+
+}
+
+
+.logo {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: auto;
+
+    margin-bottom: 25px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    color: #2563eb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:45px;
+
+    font-weight:700;
+
+}
+
+
+h1 {
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+
+.subtitle {
+
+    text-align:center;
+
+    font-size:18px;
+
+    opacity:0.85;
+
+    margin-bottom:40px;
+
+}
+
+
+.card {
+
+    background: rgba(255,255,255,0.08);
+
+    padding:25px;
+
+    border-radius:18px;
+
+    margin-bottom:25px;
+
+}
+
+
+h2 {
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+
+p {
+
+    line-height:1.8;
+
+    opacity:0.9;
+
+}
+
+
+ol, ul {
+
+    margin-top:15px;
+
+    padding-left:25px;
+
+    line-height:2;
+
+}
+
+
+.badge {
+
+    display:inline-block;
+
+    background:#10b981;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+
+.notice {
+
+    margin-top:20px;
+
+    background:rgba(16,185,129,0.15);
+
+    border-left:5px solid #10b981;
+
+    padding:18px;
+
+    border-radius:12px;
+
+}
+
+
+.email {
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:14px 25px;
+
+    background:white;
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+}
+
+
+.website {
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+.footer {
+
+    text-align:center;
+
+    margin-top:30px;
+
+    opacity:0.7;
+
+    font-size:14px;
+
+}
+
+
+@media(max-width:600px){
+
+.container {
+
+    padding:25px;
+
+}
+
+h1 {
+
+    font-size:30px;
+
+}
+
+}
+
+.logo{
+background:none;
+overflow:hidden;
+border-radius:22%;
+}
+.logo img{
+width:100%;
+height:100%;
+display:block;
+}
+
+
+details {
+    background: rgba(255,255,255,0.06);
+    border-radius:12px;
+    padding:14px 18px;
+    margin-top:12px;
+}
+summary {
+    cursor:pointer;
+    font-weight:600;
+    line-height:1.6;
+}
+details p, details ul, details ol { margin-top:10px; }
+.card a:not(.email) { color:#bfdbfe; }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="logo"><img src="logo.png" alt="KesMic Invoice logo"></div>
+<h1>KesMic Invoice Support</h1>
+<div class="subtitle">Answers to common questions, and how to reach us if you need help.</div>
+
+<div class="card">
+<h2>Contact Us</h2>
+<p>Email us with your question. It helps to include your device, the app version (shown in <strong>Settings</strong>) and a screenshot if something looks wrong.</p>
+<a class="email" href="mailto:mail.quickproducts@gmail.com?subject=KesMic%20Invoice%20support">mail.quickproducts@gmail.com</a>
+</div>
+
+<div class="card">
+<h2>Getting Started</h2>
+
+<details>
+<summary>How do I create an invoice with my voice?</summary>
+<ol>
+<li>Tap the microphone button at the bottom of the home screen.</li>
+<li>Choose <strong>Invoice</strong> or <strong>Quote</strong>, then describe the job, for example "Fitted 3 sockets for Jamie Brooks, 4 hours labour". You can also type it.</li>
+<li>Tap <strong>Create invoice</strong>. Check the draft, change anything you need, then save.</li>
+</ol>
+</details>
+
+<details>
+<summary>The microphone isn't working</summary>
+<p>Make sure KesMic Invoice is allowed to use the microphone and speech recognition. On iPhone, open the <strong>Settings</strong> app, scroll to <strong>KesMic Invoice</strong> and turn them on. On Android, open <strong>Settings &gt; Apps &gt; KesMic Invoice &gt; Permissions</strong>. You can always type the job instead.</p>
+</details>
+
+<details>
+<summary>How do I make the AI use my prices?</summary>
+<p>Add your products and services with their prices to your <strong>Catalog</strong>. When you describe a job, matching items are filled in with your saved prices. Always review the draft before saving.</p>
+</details>
+
+<details>
+<summary>How do I add my logo and business details?</summary>
+<p>Open <strong>Settings</strong> and tap your business profile at the top. Add your logo, contact details and tax ID. They appear on every new invoice and quote PDF.</p>
+</details>
+
+<details>
+<summary>How do I change the invoice design?</summary>
+<p>Open <strong>Settings &gt; Documents</strong> to pick a template, design your own and set default notes and terms.</p>
+</details>
+
+<details>
+<summary>How do I send or print an invoice?</summary>
+<p>Open the invoice and view the PDF. Use the share button to send it by email, message or any app, or the print button to print it.</p>
+</details>
+
+<details>
+<summary>Can I use the app in Spanish?</summary>
+<p>Yes. Open <strong>Settings &gt; Language</strong>. Invoices and quotes keep their own language, so you can bill customers in English or Spanish.</p>
+</details>
+</div>
+
+<div class="card">
+<h2>Subscriptions</h2>
+
+<details>
+<summary>What is the difference between Free and Pro?</summary>
+<p>Free includes a limited number of invoices, quotes and AI drafts each month, plus a limited number of customers and catalog items. Pro removes these limits. See <strong>Settings &gt; Subscription</strong> in the app for current details and prices.</p>
+</details>
+
+<details>
+<summary>How do I cancel or manage my subscription?</summary>
+<p>Subscriptions are handled by Apple or Google, and you can cancel any time.</p>
+<ul>
+<li><strong>iPhone / iPad:</strong> open the Settings app, tap your name, then <strong>Subscriptions</strong>, or visit <a href="https://apps.apple.com/account/subscriptions">apps.apple.com/account/subscriptions</a>.</li>
+<li><strong>Android:</strong> open Google Play, tap your profile, then <strong>Payments &amp; subscriptions</strong>, or visit <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.</li>
+</ul>
+<p>Deleting the app does not cancel a subscription.</p>
+</details>
+
+<details>
+<summary>I paid but Pro isn't showing</summary>
+<p>Open <strong>Settings &gt; Subscription</strong> and tap <strong>Restore purchases</strong>, using the same Apple or Google account you paid with. If it still doesn't work, email us.</p>
+</details>
+
+<details>
+<summary>How do I get a refund?</summary>
+<p>Payments are processed by Apple or Google, so refunds are requested from them. For Apple, visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. For Google Play, use your order history in Google Play.</p>
+</details>
+</div>
+
+<div class="card">
+<h2>Account &amp; Privacy</h2>
+
+<details>
+<summary>How do I delete my account?</summary>
+<p>Open <strong>Settings &gt; Delete account</strong> in the app. This permanently removes your account and its data. <a href="delete-account.html">More about account deletion</a>.</p>
+</details>
+
+<details>
+<summary>How is my data used?</summary>
+<p>Read our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+</details>
+</div>
+
+<div class="footer">
+© 2026 KesMic Invoice. All Rights Reserved.
+<br><br>
+<a class="website" href="https://kesmicinvoice.github.io/">https://kesmicinvoice.github.io/</a>
+</div>
+</div>
+</body>
+</html>
