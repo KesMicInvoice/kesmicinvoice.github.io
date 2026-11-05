@@ -1,2 +1,2 @@
 # kesmicinvoice.github.io
-KesMic Invoice
+KesMic: Invoice & Quote Maker
