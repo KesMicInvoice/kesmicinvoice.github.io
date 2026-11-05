@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>KesMic Field</title>
+  <title>KesMic Invoice</title>
   <style>
     :root {
       --bg: #f5f6f8; --card: #ffffff; --text: #1b1d22; --muted: #5d6370;
@@ -43,9 +43,9 @@
   <main id="card">
     <div class="icon" id="icon">✓</div>
     <h1 id="title">Email confirmed</h1>
-    <p id="message">Your email address is confirmed. Go back to the KesMic Field app and sign in.</p>
+    <p id="message">Your email address is confirmed. Go back to the KesMic Invoice app and sign in.</p>
     <p id="hint">You can close this page.</p>
-    <div class="brand">KesMic Field</div>
+    <div class="brand">KesMic Invoice</div>
   </main>
   <script>
     // Supabase adds the result to the URL fragment (and sometimes the query):
@@ -69,13 +69,13 @@
         set('message', p.get('error_code') === 'otp_expired'
           ? 'The link has expired or was already used. If you already confirmed your email, just sign in in the app. Otherwise, sign up again to get a new link.'
           : (p.get('error_description') || 'Something went wrong.').replace(/\+/g, ' '));
-        set('hint', 'Go back to the KesMic Field app to continue.');
+        set('hint', 'Go back to the KesMic Invoice app to continue.');
       } else if (p.get('type') === 'recovery') {
         set('title', 'Open the app to continue');
-        set('message', 'Go back to the KesMic Field app to reset your password.');
+        set('message', 'Go back to the KesMic Invoice app to reset your password.');
       } else if (p.get('type') === 'email_change') {
         set('title', 'Email updated');
-        set('message', 'Your new email address is confirmed. Go back to the KesMic Field app.');
+        set('message', 'Your new email address is confirmed. Go back to the KesMic Invoice app.');
       }
     })();
   </script>
